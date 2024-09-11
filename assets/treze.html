@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        var temperaturas = [22.0, 23.7, 18.3, 15.7, 12.9, 10.0, 9.5, 11.2, 14.5, 16.8, 19.2, 21.4]
+        var somaTemperaturas = 0
+        for (var i = 0; i < temperaturas.length; i++) {
+            somaTemperaturas += temperaturas[i]
+            }
 
+        var mediaAnual = somaTemperaturas / temperaturas.length;
+        var resultado = ""
+        for (var i = 0; i < temperaturas.length; i++) {
+            if (temperaturas[i] > mediaAnual) {
+            resultado += meses[i] + ": " + temperaturas[i] + "\n";
+            }
+        }
+    alert("Temperaturas acima da média são: (" + mediaAnual + "):\n" + resultado)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

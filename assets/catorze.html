@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var p1 = prompt("Telefonou para a vítima?")
+        var p2 = prompt("Esteve no local do crime?")
+        var p3 = prompt("Mora perto da vítima?")
+        var p4 = prompt("Devia para a vítima?")
+        var p5 = prompt("Já trabalhou com a vítima?")
+        var nivel = 0
+        if (p1.toUpperCase() === "sim") {
+            nivel++
+        }
+        if (p2.toUpperCase() === "sim") {
+            nivel++
+        }
+        if (p3.toUpperCase() === "sim") {
+            nivel++
+        }
+        if (p4.toUpperCase() === "sim") {
+            nivel++
+        }
+        if (p5.toUpperCase() === "sim") {
+            nivel++
+        }
+        if (nivel <= 1) {
+            alert("Inocente")
+        } else if (nivel === 2) {
+            alert("Suspeito")
+        } else if (nivel === 3 || nivel === 4) {
+            alert("Cumplice")
+        } else {
+            alert("Assasino")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

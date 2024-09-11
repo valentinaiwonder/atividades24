@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var vendas = [3000, 4000, 2000, 1000]
+        var salario = []
+        var salario299 = 0
+        var salario399 = 0
+        var salario499 = 0
+        var salario599 = 0
+        var salario699 = 0
+        var salario799 = 0
+        var salario899 = 0
+        var salario999 = 0
+        var salario1000 = 0
+        for (posi in vendas){
+            var calculo = 200 + (vendas[posi]*0.09)
+            salario.push(calculo)
+        }
 
+        for(posi in salario){
+            if (salario[posi] >= 200 && salario[posi] <= 299) {
+                salario299++
+            }
+            else if (salario[posi] >= 300 && salario[posi] <= 399){
+                salario399++
+            }
+            else if (salario[posi] >= 400 && salario[posi] <= 499){
+                salario499++
+            }
+            else if (salario[posi] >= 500 && salario[posi] <= 599){
+                salario599++
+            }
+            else if (salario[posi] >= 600 && salario[posi] <= 699){
+                salario699++
+            }  
+            else if (salario[posi] >= 700 && salario[posi] <= 799){
+                salario799++
+            }
+            else if (salario[posi] >= 800 && salario[posi] <= 899){
+                salario899++
+            }
+            else if (salario[posi] >= 900 && salario[posi] <= 999){
+                salario999++
+            }
+            else if (salario[posi] >= 1000){
+                salario1000++
+            }
+        }
+        alert("299: " + salario299 + " 399: " + salario399 + " 499: " + salario499 + " 599: " + salario599 + " 699: " + salario699 + " 799: " + salario799 + " 899: " + salario899 + " 999: " + salario999 + " 1000 a cima: " + salario1000)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

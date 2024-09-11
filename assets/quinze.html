@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        <script>
+        var notas_lista = []
+        var soma = 0
+        var acimaMedia = 0
+        var abaixoSete = 0
+        var nota //essa parte é o usuário que insere!//
+ 
+        while ((nota = parseInt(prompt("Digite uma nota ou -1 para encerrar: "))) != -1) {
+            notas_lista.push(nota)
+            soma += nota
+        }
 
+        var media = soma / notas_lista.length;
+        for (var num = 0; num < notas_lista.length; num++) {
+        if (notas_lista[num] > media) {
+            acimaMedia++
+        }
+        if (notas_lista[num] < 7) {
+            abaixoSete++
+        }
+        }
+
+        alert("Quantidade de valores lidos: " + notas_lista.length)
+        alert("Valores na ordem em que foram informados: " + notas_lista.join(", "))
+        alert("Valores na ordem inversa: \n" + notas_lista.slice().reverse().join(", "))
+        alert("Soma dos valores: " + soma)
+        alert("Média dos valores: " + media)
+        alert("Quantidade de valores acima da média: " + acimaMedia)
+        alert("Quantidade de valores abaixo de sete: " + abaixoSete)
+        alert("Programa encerrado!")
+    </script>
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
