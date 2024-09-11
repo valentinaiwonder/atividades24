@@ -11,10 +11,10 @@
             for (var i = 0; i < alturas.length; i++) {
                 totalaltura += alturas[i]
             }
-        var totalaltura = totalaltura / alturas.length;
+        var mAltura = totalaltura / alturas.length;
         var total = 0
             for (var i = 0; i < idades.length; i++) {
-                if (idades[i] > 13 && alturas[i] < totalaltura) {
+                if (idades[i] > 13 && alturas[i] < mAltura) {
                     total++
                 }
             }
