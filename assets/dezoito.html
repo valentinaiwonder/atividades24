@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var votos = []
+        var totalVotos = 0
+        var melhorJogador = 0
+        var melhorJogadorVotos = 0
+        var melhorJogadorPercentual = 0
+
+        while (true) {
+            var voto = parseInt(prompt("Insira o número do jogador e digite 0 para encerrar): "))
+
+            if (voto == 0) {
+                break
+            }
+
+            if (voto < 1 || voto > 23) {
+                alert("Número de camisa inválido, informe um valor entre 1 e 23 ou 0 para sair!")
+                continue
+            }
+            votos.push(voto)
+            totalVotos++
+        }
+
+        for (var num = 0; num < votos.length; num++) {
+            var jogador = votos[num]
+            var votosJogador = 0
+
+            for (var quantidade = 0; quantidade < votos.length; quantidade++) {
+                if (votos[quantidade] == jogador) {
+                    votosJogador++
+                }
+            }
+
+            var percentual = (votosJogador / totalVotos) * 100
+           
+            if (votosJogador > melhorJogadorVotos) {
+                melhorJogador = jogador
+                melhorJogadorVotos = votosJogador
+                melhorJogadorPercentual = percentual
+            }
+        }
+
+        alert("Foram computados " + totalVotos + " votos.")
+
+        for (var num = 0; num < votosUnicos.length; num++) {
+            var jogador = votos[num]
+            var votosJogador = 0
+
+            for (var quantidade = 0; quantidade < votos.length; quantidade++) {
+                if (votos[quantidade] == jogador) {
+                    votosJogador++
+                }
+            }
+           
+            var percentual = (votosJogador / totalVotos) * 100
+
+            alert("Jogador " + jogador + ": " + votosJogador + " votos (" + percentual.toFixed(1) + "%)")
+        }
+
+        alert("Resultado da votação: O melhor jogador foi o número " + melhorJogador + ", com " +
+         melhorJogadorVotos + " votos, correspondendo a " + melhorJogadorPercentual.toFixed(1) + "% do total de votos.")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

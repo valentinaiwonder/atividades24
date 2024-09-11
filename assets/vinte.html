@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var salarios = []
+        var abonos = []
+        var totalGasto = 0
+        var abonoMinimo = 100
+        var funcionariosMinimo = 0
+        var maiorAbono = 0
+
+        while (true) {
+            var salario = parseFloat(prompt("Insira o salário do funcionário ou digite 0 para encerrar: "))
+
+            if (salario == 0) {
+                break
+            }
+
+            salarios.push(salario)
+
+            var abono = salario * 0.2
+            if (abono < abonoMinimo) {
+                abono = abonoMinimo
+                funcionariosMinimo++
+            }
+
+            abonos.push(abono)
+            totalGasto += abono
+
+            if (abono > maiorAbono) {
+                maiorAbono = abono
+            }
+        }
+
+        var resultado = "Salário - Abono\n"
+        for (var valor = 0; valor < salarios.length; valor++) {
+            resultado += "R$ " + salarios[valor].toFixed(2) + " - R$ " + abonos[valor].toFixed(2) + "\n"
+        }
+        alert(resultado)
+
+        alert("Foram processados " + salarios.length + " colaboradores.")
+
+        alert("Total gasto com abonos: R$ " + totalGasto.toFixed(2))
+
+        alert("Valor mínimo pago a " + funcionariosMinimo + " colaboradores.")
+
+        alert("Maior valor de abono pago: R$ " + maiorAbono.toFixed(2))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

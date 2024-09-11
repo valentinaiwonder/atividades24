@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var c1 = 0
+        var c2 = 0
+        var c3 = 0
+        var c4 = 0
+        var c5 = 0
+        var c6 = 0
+        var eleitor = 0
+        while (true) {
+            var voto = parseInt(prompt("1-Windows Server\n2-Unix\n3-Linux\n4-Netware\n5-Mac OS\n6-Outro\n0-Sair"))
+            if (isNaN(voto) || voto < 0 || voto > 6) {
+                alert("Entrada inválida! Digite um número entre 0 e 6.")
+                continue
+            }
+            if (voto === 0) {
+                break
+            }
+            eleitor++
+            if (voto === 1) {
+                c1++
+            }
+            else if (voto === 2) {
+                c2++
+            }
+            else if (voto === 3) {
+                c3++
+            }
+            else if (voto === 4) {
+                c4++
+            }
+            else if (voto === 5) {
+                c5++
+            }
+            else if (voto === 6) {
+                c6++
+            }
+        }
+        alert("Resultados da votação:\n" + "Windows Server: " + ((c1/100)*eleitor).toFixed(2) + "%" + "\n" + "Unix: " + ((c2/100)*eleitor).toFixed(2) + "%" + 
+        "\n" + "Linux: " + ((c3/100)*eleitor).toFixed(2) + "%" + "\n" + "Netware: " + ((c4/100)*eleitor).toFixed(2) + "%" + "\n" + "Mac OS: " + 
+        ((c5/100)*eleitor).toFixed(2) + "%" + "\n" + "Outro: " + ((c6/100)*eleitor).toFixed(2) + "%" + "\n"  + "Total de eleitores: " + eleitor)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
